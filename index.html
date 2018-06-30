@@ -2,10 +2,33 @@
 <html>
 	<head>
 		<title>Page Title</title>
+		<meta charset="UTF-8">
+		
+		<script>
+      function start() {
+        gapi.client.init({
+          'apiKey': '...',
+          'discoveryDocs': [...],
+          ...
+        }).then(...)
+      };
+
+      function loadClient() {
+        gapi.load('client', start);
+      }
+    </script>
+    <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};loadClient()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
+
+		
+		
 	</head>
 	
 	<body>
-
+	
+	
+	
 		<h1>This is a Heading</h1>
 		<p>This is a paragraph.</p>
 
